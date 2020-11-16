@@ -1,0 +1,55 @@
+<!--pages/movieTest/moviedetail/moviedetail.wxml-->
+<view class="container">
+  <image src="{{movie.movieImage}}" mode="aspectFill" class="movieImg"></image>
+  <view class="movieHead">
+    <view class="movieTitle">{{movie.title}}</view>
+    <view class="moviesubtitle">{{movie.country+' . '+movie.year}}</view>
+    <view class="movieCount">
+      <text class="highLight">{{movie.wishCount}}</text>
+      <text class="normal">人想看</text>
+      <text class="highLight">{{movie.commentCount}}</text>
+      <text class="normal">条评论</text>
+    </view>
+  </view>
+  <image src="{{movie.movieImage}}" class="MovieImg"></image>
+  <view class="MovieInfo">
+    <view class="MovieInfoTitle">{{movie.title}}</view>
+    <view class="flex-row">
+      <text class="mark">评分：</text>
+      <text>{{movie.rating}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">导演：</text>
+      <text>{{movie.director}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">演员：</text>
+      <text>{{movie.casts}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">类型：</text>
+      <text>{{movie.generes}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">片长：</text>
+      <text>{{movie.durations}}</text>
+    </view>
+  </view>
+  <view class="hr"></view>
+  <view class="moviesummary">
+    <view class="summarytitle">剧情简介</view>
+    <view class="summary">{{movie.summary}}</view>
+  </view>
+  <view class="hr"></view>
+  <view class="cast">
+    <text class="castfont">演员</text>
+    <scroll-view scroll-x="true" class="scrollx">
+      <block wx:for="{{movie.castInfo}}" wx:key="item">
+        <view class="castblock">
+           <image src="{{item.avatars.small}}" class="castImg"></image>
+           <text class="castName">{{item.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

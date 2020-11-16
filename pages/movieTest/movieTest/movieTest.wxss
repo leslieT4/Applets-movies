@@ -1,0 +1,45 @@
+/* pages/movieTest/movieTest/movieTest.wxss */
+.nav{
+  display:flex;
+  flex-direction: row;
+  background-color: #51c5da;
+  color:white;
+  height:65px;
+  align-items: center;
+  padding-left:30rpx;
+}
+.normal{
+  width:33%;
+  height:55px;
+  line-height: 55px;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom:10px;
+}
+.selected{
+  width:33%;
+  height:55px;
+  line-height: 55px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #bfedf5;
+  border-bottom:10px solid #fff;
+}
+.MovieItem{
+  height:310px;
+  margin-top:10px;
+  align-items: center;
+  float:left;
+  text-align: center;
+}
+.MovieImg{
+  width:180px;
+  height:270px;
+}
+.MovieTitle{
+  font-size:16px;
+  width:180px;
+  height:45px;
+  font-weight:bold;
+}

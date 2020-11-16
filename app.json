@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/movieTest/movieTest/movieTest",
+    "pages/movieTest/moviedetail/moviedetail",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#51c5da",
+    "navigationBarTitleText": "电影资讯小程序",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

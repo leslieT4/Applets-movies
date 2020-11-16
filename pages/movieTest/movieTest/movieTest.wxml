@@ -1,0 +1,55 @@
+<!--pages/movieTest/movieTest/movieTest.wxml-->
+<view class='nav'>
+  <view id="0" class="{{currentTab==0? 'selected': 'normal'}}" bindtap="switchTab">口碑电影</view>
+  <view id="1" class="{{currentTab==1? 'selected': 'normal'}}" bindtap="switchTab">正在上映</view>
+  <view id="2" class="{{currentTab==2? 'selected': 'normal'}}" bindtap="switchTab">即将上映</view>
+</view>
+<swiper current="{{currentTab}}" style="height:{{winHeight}}px;width:{{winWidth}}px">
+  <swiper-item>
+    <view>
+      <swiper indicator-dots="true" interval="5000" duration="1000" style="height:90px;">
+        <block wx:for="{{SwiperImg}}" wx:key='item'>
+          <swiper-item>
+            <image src="{{item}}" style="height:90px;width:100%;"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view>
+      <block wx:for="{{movies}}" wx:key="item">
+        <view id="{{item.subject.id}}" class="MovieItem" style="margin-left:{{MovieLeft}}px" bindtap="MovieTab">
+          <view>
+            <image src="{{item.subject.images.small}}" class="MovieImg"></image>
+          </view>
+          <view class="MovieTitle">{{item.subject.title}}</view>
+        </view>
+      </block>
+    </view>
+  </swiper-item>
+
+  <swiper-item>
+    <view>
+      <block wx:for="{{moviesInTheaters}}" wx:key="item">
+        <view id="{{item.id}}" class="MovieItem" style="margin-left:{{MovieLeft}}px" bindtap="MovieTab">
+          <view>
+            <image src="{{item.images.small}}" class="MovieImg"></image>
+          </view>
+          <view class="MovieTitle">{{item.title}}</view>
+        </view>
+      </block>
+    </view>
+  </swiper-item>
+
+  <swiper-item>
+    <view>
+      <block wx:for="{{moviesComing}}" wx:key="item">
+        <view id="{{item.id}}" class="MovieItem" style="margin-left:{{MovieLeft}}px" bindtap="MovieTab">
+          <view>
+            <image src="{{item.images.small}}" class="MovieImg"></image>
+          </view>
+          <view class="MovieTitle">{{item.title}}</view>
+        </view>
+      </block>
+    </view>
+  </swiper-item>
+</swiper>
